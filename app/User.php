@@ -42,6 +42,6 @@ class User extends Authenticatable
      */
     public function getUser()
     {
-        return $this->get();
+        return $this->find([1,2,3]);
     }
 }

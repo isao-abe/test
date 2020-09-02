@@ -10,9 +10,9 @@
                         </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td></td>
-                            <td></td>
+                        <tr v-for="data in datalists">
+                            <td>{{data.name}}</td>
+                            <td>{{data.email}}</td>
                         </tr>
                         </tbody>
                     </table>
@@ -25,6 +25,14 @@
 <script>
     export default {
         props: ["users"],
+        data: function() {
+            return {
+                datalists:[],
+            }
+        },
+        created() {
+            this.datalists = this.users;
+        },
         mounted() {
             console.log('Component mounted.');
             console.log(this.users);

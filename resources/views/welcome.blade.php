@@ -80,16 +80,18 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                    </tr>
+                    @foreach ($users as $user)
+                        <tr>
+                            <td>{{ $user['name'] }}</td>
+                            <td>{{ $user['email'] }}</td>
+                        </tr>
+                    @endforeach
                     </tbody>
                 </table>
 
                 <h1>Vue Table</h1>
                 <div id="app">
-                    <example-component
+                    <example-component :users='@json($users)'
                     ></example-component>
                 </div>
             </div>
