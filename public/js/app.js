@@ -1934,6 +1934,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["users"],
+  data: function data() {
+    return {
+      datalists: []
+    };
+  },
+  created: function created() {
+    this.datalists = this.users;
+  },
   mounted: function mounted() {
     console.log('Component mounted.');
     console.log(this.users);
@@ -37524,30 +37532,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "container" }, [
+    _c("div", { staticClass: "row justify-content-center" }, [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("table", { staticClass: "table table-bordered" }, [
+            _vm._m(0),
+            _vm._v(" "),
+            _c(
+              "tbody",
+              _vm._l(_vm.datalists, function(data) {
+                return _c("tr", [
+                  _c("td", [_vm._v(_vm._s(data.name))]),
+                  _vm._v(" "),
+                  _c("td", [_vm._v(_vm._s(data.email))])
+                ])
+              }),
+              0
+            )
+          ])
+        ])
+      ])
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "row justify-content-center" }, [
-        _c("div", { staticClass: "col-md-8" }, [
-          _c("div", { staticClass: "card" }, [
-            _c("table", { staticClass: "table table-bordered" }, [
-              _c("thead", [
-                _c("tr", [
-                  _c("th", [_vm._v("name")]),
-                  _c("th", [_vm._v("email")])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("tbody", [_c("tr", [_c("td"), _vm._v(" "), _c("td")])])
-            ])
-          ])
-        ])
-      ])
+    return _c("thead", [
+      _c("tr", [_c("th", [_vm._v("name")]), _c("th", [_vm._v("email")])])
     ])
   }
 ]
@@ -49889,8 +49904,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/abeisao/Test/test/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/abeisao/Test/test/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /Users/kanemotoryota/test/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /Users/kanemotoryota/test/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
